@@ -265,6 +265,14 @@ extension UIView {
             }
         }
     }
+    
+    func applyShadow(radius: CGFloat = 5) {
+        layer.shadowColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.09).cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = radius
+        layer.shadowOffset = .init(width: 0, height: radius)
+        
+    }
 }
 
 extension UIEdgeInsets {

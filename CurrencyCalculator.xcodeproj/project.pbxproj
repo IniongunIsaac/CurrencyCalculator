@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		554FDA412A61411A004C8B0E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 554FDA402A61411A004C8B0E /* DGCharts */; };
 		554FDA432A6144B6004C8B0E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 554FDA422A6144B6004C8B0E /* .gitignore */; };
+		554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA442A61479E004C8B0E /* Bundle+.swift */; };
+		554FDA492A614AC8004C8B0E /* RemotePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA482A614AC8004C8B0E /* RemotePath.swift */; };
+		554FDA4B2A614C60004C8B0E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA4A2A614C60004C8B0E /* Toast.swift */; };
+		554FDA4D2A614D31004C8B0E /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA4C2A614D31004C8B0E /* UILabel+.swift */; };
+		554FDA4F2A614D9E004C8B0E /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */; };
+		554FDA512A61507D004C8B0E /* BaseRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA502A61507D004C8B0E /* BaseRemoteDatasource.swift */; };
+		554FDA542A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA532A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift */; };
+		554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA552A615D3D004C8B0E /* ConversionResponse.swift */; };
+		554FDA582A615DE9004C8B0E /* CalculatorRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA572A615DE9004C8B0E /* CalculatorRemoteDatasource.swift */; };
+		554FDA5A2A615F18004C8B0E /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA592A615F18004C8B0E /* CustomError.swift */; };
 		55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114D2A5F1B260033E697 /* AppDelegate.swift */; };
 		55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114F2A5F1B260033E697 /* SceneDelegate.swift */; };
 		55BA11522A5F1B260033E697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11512A5F1B260033E697 /* ViewController.swift */; };
@@ -22,7 +32,7 @@
 		55BA11872A5F312A0033E697 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11862A5F312A0033E697 /* UIScrollView+.swift */; };
 		55BA11892A5F31870033E697 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11882A5F31870033E697 /* UIView+.swift */; };
 		55BA118B2A5F32A90033E697 /* Code+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA118A2A5F32A90033E697 /* Code+.swift */; };
-		55BA11912A5F46180033E697 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11902A5F46180033E697 /* Symbols.swift */; };
+		55BA11912A5F46180033E697 /* SymbolsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11902A5F46180033E697 /* SymbolsResponse.swift */; };
 		79EFFBA8313F937D440EF353 /* Pods_CurrencyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240DCB9ECE27188D9ECC20B1 /* Pods_CurrencyCalculatorTests.framework */; };
 		992ABA8414E78630646161B5 /* Pods_CurrencyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AD0D04959BA1DF5C3C1C3D /* Pods_CurrencyCalculator.framework */; };
 		9C2A1F7AC112D7D0886A45A8 /* Pods_CurrencyCalculator_CurrencyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2403270B6263DA9C3765C07 /* Pods_CurrencyCalculator_CurrencyCalculatorUITests.framework */; };
@@ -49,6 +59,16 @@
 		08D98EA9B3D958EDE31AB508 /* Pods-CurrencyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator/Pods-CurrencyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		240DCB9ECE27188D9ECC20B1 /* Pods_CurrencyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		554FDA422A6144B6004C8B0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		554FDA442A61479E004C8B0E /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		554FDA482A614AC8004C8B0E /* RemotePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePath.swift; sourceTree = "<group>"; };
+		554FDA4A2A614C60004C8B0E /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		554FDA4C2A614D31004C8B0E /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		554FDA502A61507D004C8B0E /* BaseRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRemoteDatasource.swift; sourceTree = "<group>"; };
+		554FDA532A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorRemoteDatasourceProtocol.swift; sourceTree = "<group>"; };
+		554FDA552A615D3D004C8B0E /* ConversionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResponse.swift; sourceTree = "<group>"; };
+		554FDA572A615DE9004C8B0E /* CalculatorRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorRemoteDatasource.swift; sourceTree = "<group>"; };
+		554FDA592A615F18004C8B0E /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		55BA114A2A5F1B260033E697 /* CurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BA114D2A5F1B260033E697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BA114F2A5F1B260033E697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +84,7 @@
 		55BA11862A5F312A0033E697 /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		55BA11882A5F31870033E697 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		55BA118A2A5F32A90033E697 /* Code+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+.swift"; sourceTree = "<group>"; };
-		55BA11902A5F46180033E697 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		55BA11902A5F46180033E697 /* SymbolsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsResponse.swift; sourceTree = "<group>"; };
 		59AD0D04959BA1DF5C3C1C3D /* Pods_CurrencyCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDD55CA70FC3733A5240457 /* Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator-CurrencyCalculatorUITests/Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9CD313BDFC09797F74249A7F /* Pods-CurrencyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculatorTests/Pods-CurrencyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +125,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		554FDA462A614AB4004C8B0E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				554FDA482A614AC8004C8B0E /* RemotePath.swift */,
+				554FDA592A615F18004C8B0E /* CustomError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		554FDA472A614ABC004C8B0E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				554FDA502A61507D004C8B0E /* BaseRemoteDatasource.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		554FDA522A615B84004C8B0E /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				554FDA532A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift */,
+				554FDA572A615DE9004C8B0E /* CalculatorRemoteDatasource.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 		55BA11412A5F1B260033E697 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +229,10 @@
 				55BA11862A5F312A0033E697 /* UIScrollView+.swift */,
 				55BA11882A5F31870033E697 /* UIView+.swift */,
 				55BA118A2A5F32A90033E697 /* Code+.swift */,
+				554FDA442A61479E004C8B0E /* Bundle+.swift */,
+				554FDA4A2A614C60004C8B0E /* Toast.swift */,
+				554FDA4C2A614D31004C8B0E /* UILabel+.swift */,
+				554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +249,9 @@
 		55BA118D2A5F44A90033E697 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				554FDA522A615B84004C8B0E /* Calculator */,
+				554FDA472A614ABC004C8B0E /* Base */,
+				554FDA462A614AB4004C8B0E /* Utils */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -213,7 +266,8 @@
 		55BA118F2A5F460D0033E697 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				55BA11902A5F46180033E697 /* Symbols.swift */,
+				55BA11902A5F46180033E697 /* SymbolsResponse.swift */,
+				554FDA552A615D3D004C8B0E /* ConversionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -492,11 +546,21 @@
 			files = (
 				55BA11522A5F1B260033E697 /* ViewController.swift in Sources */,
 				55BA11872A5F312A0033E697 /* UIScrollView+.swift in Sources */,
+				554FDA5A2A615F18004C8B0E /* CustomError.swift in Sources */,
+				554FDA4F2A614D9E004C8B0E /* UIViewController+.swift in Sources */,
 				55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */,
 				55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */,
 				55BA118B2A5F32A90033E697 /* Code+.swift in Sources */,
+				554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */,
+				554FDA512A61507D004C8B0E /* BaseRemoteDatasource.swift in Sources */,
+				554FDA582A615DE9004C8B0E /* CalculatorRemoteDatasource.swift in Sources */,
+				554FDA492A614AC8004C8B0E /* RemotePath.swift in Sources */,
+				554FDA4B2A614C60004C8B0E /* Toast.swift in Sources */,
+				554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */,
+				554FDA542A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift in Sources */,
+				554FDA4D2A614D31004C8B0E /* UILabel+.swift in Sources */,
 				55BA11892A5F31870033E697 /* UIView+.swift in Sources */,
-				55BA11912A5F46180033E697 /* Symbols.swift in Sources */,
+				55BA11912A5F46180033E697 /* SymbolsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,8 +728,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08D98EA9B3D958EDE31AB508 /* Pods-CurrencyCalculator.debug.xcconfig */;
 			buildSettings = {
+				ACCESS_KEY = 88db24dc2051d4a633038e42f0439873;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://data.fixer.io/api/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
@@ -695,8 +761,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA9EE9476A9EDEE1F2C38DB6 /* Pods-CurrencyCalculator.release.xcconfig */;
 			buildSettings = {
+				ACCESS_KEY = 88db24dc2051d4a633038e42f0439873;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://data.fixer.io/api/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3W6S8FM5ZF;
