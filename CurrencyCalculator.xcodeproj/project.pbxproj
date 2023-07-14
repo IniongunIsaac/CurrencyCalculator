@@ -19,6 +19,9 @@
 		554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA552A615D3D004C8B0E /* ConversionResponse.swift */; };
 		554FDA582A615DE9004C8B0E /* CalculatorRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA572A615DE9004C8B0E /* CalculatorRemoteDatasource.swift */; };
 		554FDA5A2A615F18004C8B0E /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA592A615F18004C8B0E /* CustomError.swift */; };
+		554FDA5C2A6163AE004C8B0E /* DBSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA5B2A6163AE004C8B0E /* DBSymbol.swift */; };
+		554FDA5E2A616504004C8B0E /* SymbolsLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA5D2A616504004C8B0E /* SymbolsLocalDatasource.swift */; };
+		554FDA602A616512004C8B0E /* SymbolsLocalDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA5F2A616512004C8B0E /* SymbolsLocalDatasourceProtocol.swift */; };
 		55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114D2A5F1B260033E697 /* AppDelegate.swift */; };
 		55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114F2A5F1B260033E697 /* SceneDelegate.swift */; };
 		55BA11522A5F1B260033E697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11512A5F1B260033E697 /* ViewController.swift */; };
@@ -69,6 +72,9 @@
 		554FDA552A615D3D004C8B0E /* ConversionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResponse.swift; sourceTree = "<group>"; };
 		554FDA572A615DE9004C8B0E /* CalculatorRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorRemoteDatasource.swift; sourceTree = "<group>"; };
 		554FDA592A615F18004C8B0E /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		554FDA5B2A6163AE004C8B0E /* DBSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSymbol.swift; sourceTree = "<group>"; };
+		554FDA5D2A616504004C8B0E /* SymbolsLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsLocalDatasource.swift; sourceTree = "<group>"; };
+		554FDA5F2A616512004C8B0E /* SymbolsLocalDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsLocalDatasourceProtocol.swift; sourceTree = "<group>"; };
 		55BA114A2A5F1B260033E697 /* CurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BA114D2A5F1B260033E697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BA114F2A5F1B260033E697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +265,8 @@
 		55BA118E2A5F44AE0033E697 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				554FDA5D2A616504004C8B0E /* SymbolsLocalDatasource.swift */,
+				554FDA5F2A616512004C8B0E /* SymbolsLocalDatasourceProtocol.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			children = (
 				55BA11902A5F46180033E697 /* SymbolsResponse.swift */,
 				554FDA552A615D3D004C8B0E /* ConversionResponse.swift */,
+				554FDA5B2A6163AE004C8B0E /* DBSymbol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,14 +561,17 @@
 				55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */,
 				55BA118B2A5F32A90033E697 /* Code+.swift in Sources */,
 				554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */,
+				554FDA602A616512004C8B0E /* SymbolsLocalDatasourceProtocol.swift in Sources */,
 				554FDA512A61507D004C8B0E /* BaseRemoteDatasource.swift in Sources */,
 				554FDA582A615DE9004C8B0E /* CalculatorRemoteDatasource.swift in Sources */,
 				554FDA492A614AC8004C8B0E /* RemotePath.swift in Sources */,
+				554FDA5C2A6163AE004C8B0E /* DBSymbol.swift in Sources */,
 				554FDA4B2A614C60004C8B0E /* Toast.swift in Sources */,
 				554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */,
 				554FDA542A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift in Sources */,
 				554FDA4D2A614D31004C8B0E /* UILabel+.swift in Sources */,
 				55BA11892A5F31870033E697 /* UIView+.swift in Sources */,
+				554FDA5E2A616504004C8B0E /* SymbolsLocalDatasource.swift in Sources */,
 				55BA11912A5F46180033E697 /* SymbolsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
