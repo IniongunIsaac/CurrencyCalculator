@@ -8,8 +8,11 @@
 import UIKit
 
 extension UIScrollView {
-    
-    convenience init(children: [UIView], showsVerticalScrollIndicator: Bool = false, showsHorizontalScrollIndicator: Bool = false) {
+    convenience init(
+        children: [UIView],
+        showsVerticalScrollIndicator: Bool = false,
+        showsHorizontalScrollIndicator: Bool = false
+    ) {
         self.init(frame: .zero)
         addSubviews(children)
         self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
@@ -20,10 +23,11 @@ extension UIScrollView {
         contentSize.height = (subviews.sorted(by: { $0.frame.maxY < $1.frame.maxY }).last?.frame.maxY ?? contentSize.height) + offset
     }
     
-    func offsetContent(top: CGFloat = 30,
-                       bottom: CGFloat = 40,
-                       contentOffset: CGPoint = CGPoint(x: 0, y: -30),
-                       animated: Bool = true
+    func offsetContent(
+        top: CGFloat = 30,
+        bottom: CGFloat = 40,
+        contentOffset: CGPoint = CGPoint(x: 0, y: -30),
+        animated: Bool = true
     ) {
         contentInset.top = top
         contentInset.bottom = bottom

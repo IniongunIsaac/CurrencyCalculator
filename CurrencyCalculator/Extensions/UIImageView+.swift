@@ -11,7 +11,7 @@ extension UIImageView {
     convenience init(
         image: UIImage? = nil,
         contentMode: UIView.ContentMode = .scaleAspectFit,
-        tintColor: UIColor? = nil,
+        tintColor: UIColor? = .secondaryLabel,
         size: CGFloat? = nil,
         height: CGFloat? = nil,
         width: CGFloat? = nil,

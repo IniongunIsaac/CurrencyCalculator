@@ -35,6 +35,9 @@
 		554FDA7B2A618056004C8B0E /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7A2A618056004C8B0E /* UIButton+.swift */; };
 		554FDA7D2A61844B004C8B0E /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7C2A61844B004C8B0E /* Codable+.swift */; };
 		554FDA7F2A6187D9004C8B0E /* InlineFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */; };
+		554FDA812A6188F3004C8B0E /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA802A6188F3004C8B0E /* UIColor+.swift */; };
+		554FDA832A6199C2004C8B0E /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA822A6199C2004C8B0E /* InputTextField.swift */; };
+		554FDA852A619BA6004C8B0E /* CurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA842A619BA6004C8B0E /* CurrencyPickerView.swift */; };
 		55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114D2A5F1B260033E697 /* AppDelegate.swift */; };
 		55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114F2A5F1B260033E697 /* SceneDelegate.swift */; };
 		55BA11522A5F1B260033E697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11512A5F1B260033E697 /* ViewController.swift */; };
@@ -101,6 +104,9 @@
 		554FDA7A2A618056004C8B0E /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		554FDA7C2A61844B004C8B0E /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
 		554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineFunctions.swift; sourceTree = "<group>"; };
+		554FDA802A6188F3004C8B0E /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		554FDA822A6199C2004C8B0E /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		554FDA842A619BA6004C8B0E /* CurrencyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerView.swift; sourceTree = "<group>"; };
 		55BA114A2A5F1B260033E697 /* CurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BA114D2A5F1B260033E697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BA114F2A5F1B260033E697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 		554FDA6B2A616FC1004C8B0E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				554FDA822A6199C2004C8B0E /* InputTextField.swift */,
+				554FDA842A619BA6004C8B0E /* CurrencyPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 				554FDA7A2A618056004C8B0E /* UIButton+.swift */,
 				554FDA7C2A61844B004C8B0E /* Codable+.swift */,
 				554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */,
+				554FDA802A6188F3004C8B0E /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +646,7 @@
 				554FDA772A617E82004C8B0E /* UIStackView+.swift in Sources */,
 				554FDA7F2A6187D9004C8B0E /* InlineFunctions.swift in Sources */,
 				554FDA632A616E35004C8B0E /* DependencyType.swift in Sources */,
+				554FDA832A6199C2004C8B0E /* InputTextField.swift in Sources */,
 				55BA11872A5F312A0033E697 /* UIScrollView+.swift in Sources */,
 				554FDA5A2A615F18004C8B0E /* CustomError.swift in Sources */,
 				554FDA4F2A614D9E004C8B0E /* UIViewController+.swift in Sources */,
@@ -650,6 +660,7 @@
 				554FDA512A61507D004C8B0E /* BaseRemoteDatasource.swift in Sources */,
 				554FDA582A615DE9004C8B0E /* CalculatorRemoteDatasource.swift in Sources */,
 				554FDA672A616EB2004C8B0E /* DependencyContainer.swift in Sources */,
+				554FDA852A619BA6004C8B0E /* CurrencyPickerView.swift in Sources */,
 				554FDA492A614AC8004C8B0E /* RemotePath.swift in Sources */,
 				554FDA5C2A6163AE004C8B0E /* DBSymbol.swift in Sources */,
 				554FDA712A61700E004C8B0E /* CalculatorViewModel.swift in Sources */,
@@ -657,6 +668,7 @@
 				554FDA7B2A618056004C8B0E /* UIButton+.swift in Sources */,
 				554FDA652A616E8F004C8B0E /* DependencyProvider.swift in Sources */,
 				554FDA6F2A616FFE004C8B0E /* CalculatorViewModelProtocol.swift in Sources */,
+				554FDA812A6188F3004C8B0E /* UIColor+.swift in Sources */,
 				554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */,
 				554FDA792A617F65004C8B0E /* UIImageView+.swift in Sources */,
 				554FDA542A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift in Sources */,
