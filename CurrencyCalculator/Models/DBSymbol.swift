@@ -10,4 +10,10 @@ import RealmSwift
 class DBSymbol: Object {
     @Persisted(primaryKey: true) var code: String
     @Persisted var name: String
+    
+    convenience init(code: String, name: String) {
+        self.init()
+        self.code = code
+        self.name = name
+    }
 }
