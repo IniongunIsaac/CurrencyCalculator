@@ -12,13 +12,13 @@ typealias VoidAction = (() -> Void)
 typealias ArgumentAction<T> = ((T) -> Void)
 typealias ResultAction<T: Codable> = ((Result<T, CustomError>) -> Void)
 
-func _print(_ message: Any, _ messageType: ToastType = .error, isJsonResponse: Bool = false) {
+func _print(_ message: Any, _ messageType: ToastType = .success, isJson: Bool = false) {
     #if DEBUG
     switch messageType {
     case .error:
         print("🔴🔴🔴 " + String(describing: message))
     case .success:
-        if isJsonResponse {
+        if isJson {
             print("Request Response: 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢")
             print(message)
         } else {

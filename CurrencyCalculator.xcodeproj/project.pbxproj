@@ -29,6 +29,12 @@
 		554FDA6F2A616FFE004C8B0E /* CalculatorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA6E2A616FFE004C8B0E /* CalculatorViewModelProtocol.swift */; };
 		554FDA712A61700E004C8B0E /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA702A61700E004C8B0E /* CalculatorViewModel.swift */; };
 		554FDA732A6171F1004C8B0E /* CalculatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA722A6171F1004C8B0E /* CalculatorViewProtocol.swift */; };
+		554FDA752A617D21004C8B0E /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA742A617D21004C8B0E /* UIImage+.swift */; };
+		554FDA772A617E82004C8B0E /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA762A617E82004C8B0E /* UIStackView+.swift */; };
+		554FDA792A617F65004C8B0E /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA782A617F65004C8B0E /* UIImageView+.swift */; };
+		554FDA7B2A618056004C8B0E /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7A2A618056004C8B0E /* UIButton+.swift */; };
+		554FDA7D2A61844B004C8B0E /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7C2A61844B004C8B0E /* Codable+.swift */; };
+		554FDA7F2A6187D9004C8B0E /* InlineFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */; };
 		55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114D2A5F1B260033E697 /* AppDelegate.swift */; };
 		55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA114F2A5F1B260033E697 /* SceneDelegate.swift */; };
 		55BA11522A5F1B260033E697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11512A5F1B260033E697 /* ViewController.swift */; };
@@ -89,6 +95,12 @@
 		554FDA6E2A616FFE004C8B0E /* CalculatorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelProtocol.swift; sourceTree = "<group>"; };
 		554FDA702A61700E004C8B0E /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		554FDA722A6171F1004C8B0E /* CalculatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewProtocol.swift; sourceTree = "<group>"; };
+		554FDA742A617D21004C8B0E /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		554FDA762A617E82004C8B0E /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		554FDA782A617F65004C8B0E /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		554FDA7A2A618056004C8B0E /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		554FDA7C2A61844B004C8B0E /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
+		554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineFunctions.swift; sourceTree = "<group>"; };
 		55BA114A2A5F1B260033E697 /* CurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BA114D2A5F1B260033E697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BA114F2A5F1B260033E697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,13 +254,13 @@
 		55BA114C2A5F1B260033E697 /* CurrencyCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				554FDA682A616FA8004C8B0E /* Features */,
+				55BA11832A5F30F40033E697 /* App */,
 				554FDA612A616E16004C8B0E /* DI */,
+				554FDA682A616FA8004C8B0E /* Features */,
 				55BA118F2A5F460D0033E697 /* Models */,
 				55BA118C2A5F44A20033E697 /* Datasource */,
 				55BA11852A5F31140033E697 /* Extensions */,
 				55BA11842A5F31000033E697 /* Resources */,
-				55BA11832A5F30F40033E697 /* App */,
 				55BA11512A5F1B260033E697 /* ViewController.swift */,
 			);
 			path = CurrencyCalculator;
@@ -300,6 +312,12 @@
 				554FDA4A2A614C60004C8B0E /* Toast.swift */,
 				554FDA4C2A614D31004C8B0E /* UILabel+.swift */,
 				554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */,
+				554FDA742A617D21004C8B0E /* UIImage+.swift */,
+				554FDA762A617E82004C8B0E /* UIStackView+.swift */,
+				554FDA782A617F65004C8B0E /* UIImageView+.swift */,
+				554FDA7A2A618056004C8B0E /* UIButton+.swift */,
+				554FDA7C2A61844B004C8B0E /* Codable+.swift */,
+				554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,6 +633,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BA11522A5F1B260033E697 /* ViewController.swift in Sources */,
+				554FDA752A617D21004C8B0E /* UIImage+.swift in Sources */,
+				554FDA772A617E82004C8B0E /* UIStackView+.swift in Sources */,
+				554FDA7F2A6187D9004C8B0E /* InlineFunctions.swift in Sources */,
 				554FDA632A616E35004C8B0E /* DependencyType.swift in Sources */,
 				55BA11872A5F312A0033E697 /* UIScrollView+.swift in Sources */,
 				554FDA5A2A615F18004C8B0E /* CustomError.swift in Sources */,
@@ -633,13 +654,16 @@
 				554FDA5C2A6163AE004C8B0E /* DBSymbol.swift in Sources */,
 				554FDA712A61700E004C8B0E /* CalculatorViewModel.swift in Sources */,
 				554FDA4B2A614C60004C8B0E /* Toast.swift in Sources */,
+				554FDA7B2A618056004C8B0E /* UIButton+.swift in Sources */,
 				554FDA652A616E8F004C8B0E /* DependencyProvider.swift in Sources */,
 				554FDA6F2A616FFE004C8B0E /* CalculatorViewModelProtocol.swift in Sources */,
 				554FDA562A615D3D004C8B0E /* ConversionResponse.swift in Sources */,
+				554FDA792A617F65004C8B0E /* UIImageView+.swift in Sources */,
 				554FDA542A615B9D004C8B0E /* CalculatorRemoteDatasourceProtocol.swift in Sources */,
 				554FDA4D2A614D31004C8B0E /* UILabel+.swift in Sources */,
 				55BA11892A5F31870033E697 /* UIView+.swift in Sources */,
 				554FDA5E2A616504004C8B0E /* SymbolsLocalDatasource.swift in Sources */,
+				554FDA7D2A61844B004C8B0E /* Codable+.swift in Sources */,
 				55BA11912A5F46180033E697 /* SymbolsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,7 +844,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Currency;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -853,7 +877,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Currency;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CalculatorViewProtocol {
+protocol CalculatorViewProtocol: AnyObject {
     func showLoadingAnimation(_ show: Bool)
     func showError(_ message: String, type: ToastType)
     func showConversionResult(_ value: String)

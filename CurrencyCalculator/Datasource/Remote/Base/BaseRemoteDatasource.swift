@@ -23,6 +23,7 @@ class BaseRemoteDatasource {
         AF.request(path.requestURL, method: method, parameters: params).validate().responseDecodable(of: returnType) { response in
             switch response.result {
             case let .success(model):
+                _print(model.prettyJson, isJson: true)
                 completion?(.success(model))
             case let .failure(error):
                 completion?(.failure(.custom(error.localizedDescription)))

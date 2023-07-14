@@ -14,7 +14,7 @@ final class DependencyContainer {
     
     static func register<T>(type: T.Type,
                                   as dependencyType: DependencyType = .automatic,
-                                  _ factory: @autoclosure @escaping () -> T
+                                  factory: @autoclosure @escaping () -> T
     ) {
         generators[String(describing: type.self)] = factory
         
@@ -49,5 +49,13 @@ final class DependencyContainer {
                 return nil
             }
         }
+    }
+}
+
+extension DependencyContainer {
+    static func configureDependencies() {
+        register(type: CalculatorRemoteDatasourceProtocol.self, factory: CalculatorRemoteDatasource())
+        register(type: SymbolsLocalDatasourceProtocol.self, factory: SymbolsLocalDatasource())
+        register(type: CalculatorViewModelProtocol.self, factory: CalculatorViewModel())
     }
 }

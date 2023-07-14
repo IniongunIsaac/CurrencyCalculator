@@ -13,7 +13,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
     @Provided var calculatorRemoteDatasource: CalculatorRemoteDatasourceProtocol
     
     private(set) var symbols: [DBSymbol] = []
-    var viewProtocol: CalculatorViewProtocol?
+    weak var viewProtocol: CalculatorViewProtocol?
     
     func getSymbols() {
         let dbSymbols = symbolsLocalDatasource.getSymbols()

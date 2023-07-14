@@ -10,11 +10,31 @@ import UIKit
 final class CalculatorViewController: UIViewController {
     
     @Provided var viewModel: CalculatorViewModelProtocol
+    
+    lazy var menuBarButton = UIBarButtonItem(image: .menu, style: .plain, target: self, action: #selector(didTapMenu))
+    let signupButton = UIButton(title: "Sign up", textColor: .systemGreen)
+    lazy var signupBarButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(didTapSignup))
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         viewModel.viewProtocol = self
         viewModel.getSymbols()
+    }
+    
+    private func setupView() {
+        backgroundColor = .systemBackground
+        navigationItem.leftBarButtonItem = menuBarButton
+        navigationItem.rightBarButtonItem = signupBarButton
+        navigationController?.navigationBar.tintColor = .systemGreen
+    }
+    
+    @objc private func didTapMenu() {
+        
+    }
+    
+    @objc private func didTapSignup() {
+        
     }
 
 }
