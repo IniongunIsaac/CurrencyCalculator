@@ -13,5 +13,6 @@ extension UIImage {
     static var menu = UIImage(systemName: "text.justify.left")?.withTintColor(.systemGreen) ?? UIImage()
     static var arrowLeftRight = UIImage(systemName: "arrow.left.arrow.right") ?? UIImage()
     static var info = UIImage(systemName: "info.circle.fill") ?? UIImage()
+    static var xmark = UIImage(systemName: "xmark") ?? UIImage()
     static var euro = UIImage(named: "eu") ?? UIImage()
 }

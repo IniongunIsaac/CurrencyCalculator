@@ -72,7 +72,6 @@ final class CalculatorViewController: UIViewController {
             contentStackView.anchor(
                 top: $0._topAnchor,
                 leading: $0._leadingAnchor,
-                //bottom: $0._bottomAnchor,
                 trailing: $0._trailingAnchor,
                 padding: ._init(top: 30, left: 20, right: 20)
             )
@@ -109,8 +108,6 @@ final class CalculatorViewController: UIViewController {
     private func configureChartContainerView() {
         with(chartContainerView) {
             $0.backgroundColor = .systemBlue
-            //$0.addRoundCorners([.topLeft, .topRight], radius: 20)
-            //$0.constraintHeight(constant: 500)
         }
     }
     
@@ -128,7 +125,9 @@ final class CalculatorViewController: UIViewController {
     }
     
     private func didTapNewCurrency() {
-        
+        let viewController = CurrenciesViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true)
     }
 
 }

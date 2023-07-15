@@ -79,4 +79,8 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
             viewProtocol?.showError("Unable to get conversion data, please try again", type: .error)
         }
     }
+    
+    func updateSelectedSymbol(_ dbSymbol: DBSymbol) {
+        
+    }
 }
