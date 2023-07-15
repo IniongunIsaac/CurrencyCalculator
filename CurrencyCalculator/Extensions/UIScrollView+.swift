@@ -39,10 +39,6 @@ extension UIScrollView {
         showsHorizontalScrollIndicator = show
     }
     
-    func fillContentView(with view: UIView, padding: UIEdgeInsets = .zero) {
-        view.anchor(top: _topAnchor, leading: _leadingAnchor, bottom: _bottomAnchor, trailing: _trailingAnchor, padding: padding)
-    }
-    
     var _topAnchor: NSLayoutYAxisAnchor? { contentLayoutGuide.topAnchor }
     
     var _bottomAnchor: NSLayoutYAxisAnchor? { contentLayoutGuide.bottomAnchor }
@@ -51,8 +47,4 @@ extension UIScrollView {
     
     var _trailingAnchor: NSLayoutXAxisAnchor? { frameLayoutGuide.trailingAnchor }
     
-    func scrollToBottom() {
-        let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.height + contentInset.bottom)
-        setContentOffset(bottomOffset, animated: true)
-    }
 }

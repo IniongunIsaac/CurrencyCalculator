@@ -14,6 +14,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
     
     private(set) var symbols: [DBSymbol] = []
     weak var viewProtocol: CalculatorViewProtocol?
+    private var selectedSymbol: DBSymbol?
     
     func getSymbols() {
         let dbSymbols = symbolsLocalDatasource.getSymbols()
@@ -50,7 +51,17 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         }
     }
     
-    func convert(amount: String, symbol: String) {
+    func convert(amount: String) {
+        guard (Double(amount) ?? 0) > 1 else {
+            viewProtocol?.showError("Please enter an EUR amount to convert", type: .error)
+            return
+        }
+        
+        guard let symbol = selectedSymbol?.code else {
+            viewProtocol?.showError("Please choose a currency", type: .error)
+            return
+        }
+        
         viewProtocol?.showLoadingAnimation(true)
         calculatorRemoteDatasource.getRates(symbol: symbol) { [weak self] result in
             self?.viewProtocol?.showLoadingAnimation(false)
@@ -81,6 +92,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
     }
     
     func updateSelectedSymbol(_ dbSymbol: DBSymbol) {
-        
+        selectedSymbol = dbSymbol
+        viewProtocol?.didChooseSymbol(dbSymbol)
     }
 }

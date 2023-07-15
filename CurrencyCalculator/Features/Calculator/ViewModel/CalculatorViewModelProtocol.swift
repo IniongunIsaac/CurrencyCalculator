@@ -12,6 +12,6 @@ protocol CalculatorViewModelProtocol {
     var symbols: [DBSymbol] { get }
     
     func getSymbols()
-    func convert(amount: String, symbol: String)
+    func convert(amount: String)
     func updateSelectedSymbol(_ dbSymbol: DBSymbol)
 }

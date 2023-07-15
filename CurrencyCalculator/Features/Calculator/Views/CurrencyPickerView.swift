@@ -22,6 +22,12 @@ final class CurrencyPickerView: UIView {
         get { flagImageView.image }
         set { flagImageView.image = newValue }
     }
+    
+    var text: String {
+        get { currencyLabel.text ?? "" }
+        set { currencyLabel.text = newValue }
+    }
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)

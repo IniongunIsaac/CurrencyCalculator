@@ -45,4 +45,32 @@ extension UIViewController {
     func hideAlert() {
         Toast.shared.hideToast()
     }
+    
+    var safeAreaTopHeight: CGFloat {
+        view.safeAreaInsets.top
+    }
+    
+    func showLoader(_ show: Bool, interactionEnabled: Bool = true) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            Loader.forceRemoveAnimations()
+            if show {
+                Loader.showProgressBar(
+                    parentView: self.view,
+                    navBarHeight: self.safeAreaTopHeight
+                )
+            } else {
+                Loader.forceRemoveAnimations()
+            }
+            
+            self.interactionEnabled(interactionEnabled)
+        }
+    }
+    
+    func interactionEnabled(_ enabled: Bool) {
+        let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
+        guard let currentWindow: UIWindow =  window else {return}
+        currentWindow.isUserInteractionEnabled = enabled
+    }
 }

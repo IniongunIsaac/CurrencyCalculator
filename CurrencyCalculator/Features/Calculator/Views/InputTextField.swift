@@ -44,10 +44,23 @@ final class InputTextField: UIView {
         with(inputStackView) {
             addSubview($0)
             $0.centerYInSuperview()
-            $0.anchor(leading: leadingAnchor,
-                      trailing: trailingAnchor,
-                      padding: ._init(leftRight: 15))
+            $0.anchor(
+                leading: leadingAnchor,
+                trailing: trailingAnchor,
+                padding: ._init(leftRight: 15)
+            )
         }
         textField.placeholder = "0.00"
+        textField.delegate = self
+    }
+}
+
+extension InputTextField: UITextFieldDelegate {
+    func textField(
+        _ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String
+    ) -> Bool {
+        string == string.filter("0123456789".contains)
     }
 }

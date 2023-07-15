@@ -95,12 +95,16 @@ final class CalculatorViewController: UIViewController {
         
         euroPickerView.widthAnchor.constraint(equalTo: newCurrencyPickerView.widthAnchor).isActive = true
         euroPickerView.flag = .euro
-        newCurrencyInputTextField.enableUserInteraction(false)
+        newCurrencyInputTextField.enableUserInteraction(false, alpha: 0.7)
         newCurrencyInputTextField.rightText = "XXX"
         
         newCurrencyPickerView.animateOnTap { [weak self] in
             self?.didTapNewCurrency()
         }
+        
+        newCurrencyPickerView.text = "XXX"
+        
+        convertButton.addTarget(self, action: #selector(didTapConvertButton), for: .touchUpInside)
         
         configureChartContainerView()
     }
@@ -129,12 +133,16 @@ final class CalculatorViewController: UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true)
     }
+    
+    @objc private func didTapConvertButton() {
+        viewModel.convert(amount: euroInputTextField.text)
+    }
 
 }
 
 extension CalculatorViewController: CalculatorViewProtocol {
     func showLoadingAnimation(_ show: Bool) {
-        
+        showLoader(show, interactionEnabled: !show)
     }
     
     func showError(_ message: String, type: ToastType) {
@@ -142,6 +150,11 @@ extension CalculatorViewController: CalculatorViewProtocol {
     }
     
     func showConversionResult(_ value: String) {
-        
+        newCurrencyInputTextField.text = value
+    }
+    
+    func didChooseSymbol(_ symbol: DBSymbol) {
+        newCurrencyPickerView.text = symbol.code
+        newCurrencyInputTextField.rightText = symbol.code
     }
 }
