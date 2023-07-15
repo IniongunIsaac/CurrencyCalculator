@@ -44,8 +44,8 @@ final class CalculatorViewController: UIViewController {
         subviews: [headerLabel, euroInputTextField, newCurrencyInputTextField, pickerStackView, convertButton],
         spacing: 20
     )
-    let chartView = LineChartView()
-    private let chartContainerView = UIView().withHeight(500)
+    let chartView = LineChartView().withHeight(400)
+    private let chartContainerView = UIView()
     private lazy var contentScrollView = UIScrollView(children: [contentStackView, chartContainerView])
 
     override func viewDidLoad() {
@@ -112,13 +112,62 @@ final class CalculatorViewController: UIViewController {
     }
     
     private func configureChartContainerView() {
+        let past30DaysButton = UIButton(
+            title: "Past 30 days",
+            font: .systemFont(ofSize: 16, weight: .semibold),
+            textColor: .white
+        )
+        
+        let past90DaysButton = UIButton(
+            title: "Past 90 days",
+            font: .systemFont(ofSize: 16, weight: .semibold),
+            textColor: .white.withAlphaComponent(0.5)
+        )
+        
+        let buttonsStackView = UIHStack(
+            subviews: [past30DaysButton, past90DaysButton],
+            spacing: 30
+        )
+        
+        let getRatesLabel = UILabel(
+            text: "Get rate alerts straight to your inbox",
+            font: .systemFont(ofSize: 15),
+            color: .white,
+            alignment: .center,
+            underlined: true
+        )
         
         with(chartContainerView) {
             $0.backgroundColor = .systemBlue
-            $0.addSubviews(chartView)
+            $0.addSubviews(chartView, buttonsStackView, getRatesLabel)
+            
+            buttonsStackView.centerXInSuperview()
+            buttonsStackView.anchor(
+                top: $0.topAnchor,
+                padding: ._init(top: 30)
+            )
+            
+            chartView.anchor(
+                top: buttonsStackView.bottomAnchor,
+                leading: $0.leadingAnchor,
+                bottom: getRatesLabel.topAnchor,
+                trailing: $0.trailingAnchor,
+                padding: ._init(allEdges: 20)
+            )
+            
+            getRatesLabel.anchor(
+                leading: $0.leadingAnchor,
+                bottom: $0.bottomAnchor,
+                trailing: $0.trailingAnchor,
+                padding: ._init(topBottom: 80, leftRight: 20)
+            )
         }
-        chartView.fillSuperview(padding: ._init(topBottom: 30, leftRight: 20))
+        
         configureChartView()
+        
+        getRatesLabel.animateOnTap { [weak self] in
+            self?.showMessage("Get rates in inbox.")
+        }
     }
     
     private func configureChartView() {
