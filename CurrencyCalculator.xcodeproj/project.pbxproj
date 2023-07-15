@@ -54,6 +54,7 @@
 		55BA11912A5F46180033E697 /* SymbolsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA11902A5F46180033E697 /* SymbolsResponse.swift */; };
 		55E6742D2A62695D00B8AF3D /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E6742C2A62695D00B8AF3D /* CurrenciesViewController.swift */; };
 		55E6742F2A62800100B8AF3D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E6742E2A62800100B8AF3D /* Loader.swift */; };
+		55E674372A62B3AB00B8AF3D /* BaloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E674362A62B3AB00B8AF3D /* BaloonMarker.swift */; };
 		79EFFBA8313F937D440EF353 /* Pods_CurrencyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240DCB9ECE27188D9ECC20B1 /* Pods_CurrencyCalculatorTests.framework */; };
 		992ABA8414E78630646161B5 /* Pods_CurrencyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AD0D04959BA1DF5C3C1C3D /* Pods_CurrencyCalculator.framework */; };
 		9C2A1F7AC112D7D0886A45A8 /* Pods_CurrencyCalculator_CurrencyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2403270B6263DA9C3765C07 /* Pods_CurrencyCalculator_CurrencyCalculatorUITests.framework */; };
@@ -127,6 +128,7 @@
 		55BA11902A5F46180033E697 /* SymbolsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsResponse.swift; sourceTree = "<group>"; };
 		55E6742C2A62695D00B8AF3D /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		55E6742E2A62800100B8AF3D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		55E674362A62B3AB00B8AF3D /* BaloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaloonMarker.swift; sourceTree = "<group>"; };
 		59AD0D04959BA1DF5C3C1C3D /* Pods_CurrencyCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDD55CA70FC3733A5240457 /* Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator-CurrencyCalculatorUITests/Pods-CurrencyCalculator-CurrencyCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9CD313BDFC09797F74249A7F /* Pods-CurrencyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculatorTests/Pods-CurrencyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,7 +274,7 @@
 				554FDA682A616FA8004C8B0E /* Features */,
 				55BA118F2A5F460D0033E697 /* Models */,
 				55BA118C2A5F44A20033E697 /* Datasource */,
-				55BA11852A5F31140033E697 /* Extensions */,
+				55BA11852A5F31140033E697 /* Utils */,
 				55BA11842A5F31000033E697 /* Resources */,
 				55BA11512A5F1B260033E697 /* ViewController.swift */,
 			);
@@ -315,26 +317,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		55BA11852A5F31140033E697 /* Extensions */ = {
+		55BA11852A5F31140033E697 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				55BA11862A5F312A0033E697 /* UIScrollView+.swift */,
-				55BA11882A5F31870033E697 /* UIView+.swift */,
-				55BA118A2A5F32A90033E697 /* Code+.swift */,
-				554FDA442A61479E004C8B0E /* Bundle+.swift */,
-				554FDA4A2A614C60004C8B0E /* Toast.swift */,
-				554FDA4C2A614D31004C8B0E /* UILabel+.swift */,
-				554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */,
-				554FDA742A617D21004C8B0E /* UIImage+.swift */,
-				554FDA762A617E82004C8B0E /* UIStackView+.swift */,
-				554FDA782A617F65004C8B0E /* UIImageView+.swift */,
-				554FDA7A2A618056004C8B0E /* UIButton+.swift */,
-				554FDA7C2A61844B004C8B0E /* Codable+.swift */,
-				554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */,
-				554FDA802A6188F3004C8B0E /* UIColor+.swift */,
-				55E6742E2A62800100B8AF3D /* Loader.swift */,
+				55E674352A62B39600B8AF3D /* Extensions */,
+				55E674342A62B37A00B8AF3D /* Components */,
 			);
-			path = Extensions;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		55BA118C2A5F44A20033E697 /* Datasource */ = {
@@ -373,6 +362,36 @@
 				554FDA5B2A6163AE004C8B0E /* DBSymbol.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		55E674342A62B37A00B8AF3D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				554FDA4A2A614C60004C8B0E /* Toast.swift */,
+				55E6742E2A62800100B8AF3D /* Loader.swift */,
+				55E674362A62B3AB00B8AF3D /* BaloonMarker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		55E674352A62B39600B8AF3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55BA11862A5F312A0033E697 /* UIScrollView+.swift */,
+				55BA11882A5F31870033E697 /* UIView+.swift */,
+				55BA118A2A5F32A90033E697 /* Code+.swift */,
+				554FDA442A61479E004C8B0E /* Bundle+.swift */,
+				554FDA4C2A614D31004C8B0E /* UILabel+.swift */,
+				554FDA4E2A614D9E004C8B0E /* UIViewController+.swift */,
+				554FDA742A617D21004C8B0E /* UIImage+.swift */,
+				554FDA762A617E82004C8B0E /* UIStackView+.swift */,
+				554FDA782A617F65004C8B0E /* UIImageView+.swift */,
+				554FDA7A2A618056004C8B0E /* UIButton+.swift */,
+				554FDA7C2A61844B004C8B0E /* Codable+.swift */,
+				554FDA7E2A6187D9004C8B0E /* InlineFunctions.swift */,
+				554FDA802A6188F3004C8B0E /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		96B1E843185A07F3ABCA1E62 /* Pods */ = {
@@ -658,6 +677,7 @@
 				554FDA4F2A614D9E004C8B0E /* UIViewController+.swift in Sources */,
 				55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */,
 				55E6742D2A62695D00B8AF3D /* CurrenciesViewController.swift in Sources */,
+				55E674372A62B3AB00B8AF3D /* BaloonMarker.swift in Sources */,
 				55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */,
 				55BA118B2A5F32A90033E697 /* Code+.swift in Sources */,
 				554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */,

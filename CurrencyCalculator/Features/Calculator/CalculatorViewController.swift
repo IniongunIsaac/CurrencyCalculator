@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DGCharts
 
 final class CalculatorViewController: UIViewController {
     
@@ -43,6 +44,7 @@ final class CalculatorViewController: UIViewController {
         subviews: [headerLabel, euroInputTextField, newCurrencyInputTextField, pickerStackView, convertButton],
         spacing: 20
     )
+    let chartView = LineChartView()
     private let chartContainerView = UIView().withHeight(500)
     private lazy var contentScrollView = UIScrollView(children: [contentStackView, chartContainerView])
 
@@ -73,7 +75,7 @@ final class CalculatorViewController: UIViewController {
                 top: $0._topAnchor,
                 leading: $0._leadingAnchor,
                 trailing: $0._trailingAnchor,
-                padding: ._init(top: 30, left: 20, right: 20)
+                padding: ._init(top: 20, left: 20, right: 20)
             )
             
             chartContainerView.anchor(
@@ -84,7 +86,7 @@ final class CalculatorViewController: UIViewController {
                 padding: ._init(top: 50)
             )
             
-            $0.offsetContent(bottom: -100)
+            $0.offsetContent(bottom: -50)
         }
         
         with(contentStackView) {
@@ -110,8 +112,72 @@ final class CalculatorViewController: UIViewController {
     }
     
     private func configureChartContainerView() {
+        
         with(chartContainerView) {
             $0.backgroundColor = .systemBlue
+            $0.addSubviews(chartView)
+        }
+        chartView.fillSuperview(padding: ._init(topBottom: 30, leftRight: 20))
+        configureChartView()
+    }
+    
+    private func configureChartView() {
+        let numberOfDays = 15
+        
+        var dates = [String]()
+        let chartDataEntries = (1...numberOfDays).map { (dateValue) -> ChartDataEntry in
+            dates.append("\(dateValue) Jun.")
+            let amountValue = Double(arc4random_uniform(70))
+            return ChartDataEntry(x: Double(dateValue), y: amountValue, icon: nil)
+        }
+        
+        let gradientColors = [UIColor.white.withAlphaComponent(0.3).cgColor, UIColor.white.withAlphaComponent(0.8).cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
+        
+        let chartDataSet = LineChartDataSet(entries: chartDataEntries, label: "")
+        
+        with(chartDataSet) {
+            $0.lineDashLengths = nil
+            $0.highlightLineDashLengths = nil
+            $0.setColors(.clear)
+            $0.gradientPositions = [0, 40, 100]
+            $0.drawCircleHoleEnabled = false
+            $0.drawValuesEnabled = false
+            $0.drawCirclesEnabled = false
+            
+            $0.fillAlpha = 1
+            $0.fill = LinearGradientFill(gradient: gradient, angle: 90)
+            $0.drawFilledEnabled = true
+        }
+        
+        chartView.rightAxis.enabled = false
+        
+        with(chartView.leftAxis) {
+            $0.labelTextColor = .white
+            $0.drawGridLinesEnabled = false
+        }
+        
+        with(chartView.xAxis) {
+            $0.labelTextColor = .white
+            $0.labelPosition = .bottom
+            $0.drawGridLinesEnabled = false
+            $0.valueFormatter = IndexAxisValueFormatter(values: dates)
+            $0.granularity = 1
+        }
+        
+        let marker = BalloonMarker(
+            color: .appGreen,
+            font: .systemFont(ofSize: 12),
+            textColor: .white,
+            insets: .init(top: 8, left: 8, bottom: 20, right: 8)
+        )
+        let chartData = LineChartData(dataSet: chartDataSet)
+        with(chartView) {
+            $0.data = chartData
+            $0.animate(xAxisDuration: 1.5, yAxisDuration: 1.5)
+            marker.chartView = $0
+            marker.minimumSize = CGSize(width: 80, height: 40)
+            $0.marker = marker
         }
     }
     
@@ -121,11 +187,11 @@ final class CalculatorViewController: UIViewController {
     }
     
     @objc private func didTapMenuButton() {
-        //TODO: Implement menu tap action
+        showMessage("Menu tapped")
     }
     
     @objc private func didTapSignupButton() {
-        //TODO: Implement signup tap action
+        showMessage("Signup tapped")
     }
     
     private func didTapNewCurrency() {
@@ -156,5 +222,6 @@ extension CalculatorViewController: CalculatorViewProtocol {
     func didChooseSymbol(_ symbol: DBSymbol) {
         newCurrencyPickerView.text = symbol.code
         newCurrencyInputTextField.rightText = symbol.code
+        newCurrencyInputTextField.text = ""
     }
 }
