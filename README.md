@@ -18,5 +18,5 @@ The application is built using the following:
 * iOS 13+
 
 ## Screenshots
-[<img src="/CurrencyCalculator/Screenshots/1.png" align="center" width ="22%" hspace="0" vspace="10">](/CurrencyCalculator/Screenshots/1.png)
-[<img src="/CurrencyCalculator/Screenshots/2.png" align="center" width ="22%" hspace="0" vspace="10">](/CurrencyCalculator/Screenshots/2.png)
+[<img src="/CurrencyCalculator/Screenshots/1.png" align="center" width ="35%" hspace="0" vspace="10">](/CurrencyCalculator/Screenshots/1.png)
+[<img src="/CurrencyCalculator/Screenshots/2.png" align="center" width ="35%" hspace="0" vspace="10">](/CurrencyCalculator/Screenshots/2.png)
