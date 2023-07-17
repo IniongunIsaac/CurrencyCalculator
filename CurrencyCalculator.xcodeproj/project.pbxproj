@@ -94,6 +94,9 @@
 		55331BD02A655841000A1925 /* ModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDecodingTests.swift; sourceTree = "<group>"; };
 		55331BD22A6566EA000A1925 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		55331BD42A656A48000A1925 /* DBSymbols+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBSymbols+.swift"; sourceTree = "<group>"; };
+		55331BD62A6577BF000A1925 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55331BD82A657884000A1925 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		55331BD92A657884000A1925 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		554FDA422A6144B6004C8B0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		554FDA442A61479E004C8B0E /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		554FDA482A614AC8004C8B0E /* RemotePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePath.swift; sourceTree = "<group>"; };
@@ -206,6 +209,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		55331BD72A65784F000A1925 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				55331BD92A657884000A1925 /* 1.png */,
+				55331BD82A657884000A1925 /* 2.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		554FDA462A614AB4004C8B0E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +293,7 @@
 		55BA11412A5F1B260033E697 = {
 			isa = PBXGroup;
 			children = (
+				55331BD62A6577BF000A1925 /* README.md */,
 				554FDA422A6144B6004C8B0E /* .gitignore */,
 				55BA114C2A5F1B260033E697 /* CurrencyCalculator */,
 				55BA11632A5F1B270033E697 /* CurrencyCalculatorTests */,
@@ -304,6 +317,7 @@
 		55BA114C2A5F1B260033E697 /* CurrencyCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				55331BD72A65784F000A1925 /* Screenshots */,
 				55BA11832A5F30F40033E697 /* App */,
 				554FDA612A616E16004C8B0E /* DI */,
 				554FDA682A616FA8004C8B0E /* Features */,

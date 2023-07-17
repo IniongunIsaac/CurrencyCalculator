@@ -19,10 +19,6 @@ extension UIScrollView {
         self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
     }
     
-    func updateContentView(_ offset: CGFloat = 50) {
-        contentSize.height = (subviews.sorted(by: { $0.frame.maxY < $1.frame.maxY }).last?.frame.maxY ?? contentSize.height) + offset
-    }
-    
     func offsetContent(
         top: CGFloat = 30,
         bottom: CGFloat = 40,
