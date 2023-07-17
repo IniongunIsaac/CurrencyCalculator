@@ -139,7 +139,6 @@ final class CalculatorViewController: UIViewController {
             $0.setCustomSpacing(40, after: headerLabel)
             $0.setCustomSpacing(30, after: pickerStackView)
             $0.setCustomSpacing(30, after: newCurrencyInputTextField)
-            //$0.setCustomSpacing(30, after: convertButton)
         }
         
         with(euroPickerView) {
