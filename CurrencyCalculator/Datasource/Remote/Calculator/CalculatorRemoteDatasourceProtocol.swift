@@ -9,5 +9,6 @@ import Foundation
 
 protocol CalculatorRemoteDatasourceProtocol {
     func getSymbols(completion: ResultAction<SymbolsResponse>?)
+    
     func getRates(symbol: String, completion: ResultAction<ConversionResponse>?)
 }
