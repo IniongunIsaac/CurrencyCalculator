@@ -63,13 +63,30 @@ final class CalculatorViewController: UIViewController {
         cornerRadius: 5,
         height: 50
     )
+    let ratesTimeLabel = UILabel(
+        text: "Mid-market exchange rates at 14:40PM UTC",
+        font: .systemFont(ofSize: 14, weight: .regular),
+        color: .appBlue,
+        alignment: .center,
+        underlined: true
+    )
+    let infoImageView = UIImageView(
+        image: .info,
+        tintColor: .appBlue,
+        width: 25
+    )
+    private lazy var ratesTimeStackView = UIHStack(
+        subviews: [ratesTimeLabel, infoImageView],
+        spacing: 7,
+        alignment: .center
+    )
     private lazy var contentStackView = UIVStack(
         subviews: [headerLabel, euroInputTextField, newCurrencyInputTextField, pickerStackView, convertButton],
         spacing: 20
     )
     let chartView = LineChartView().withHeight(400)
     private let chartContainerView = UIView()
-    private lazy var contentScrollView = UIScrollView(children: [contentStackView, chartContainerView])
+    private lazy var contentScrollView = UIScrollView(children: [contentStackView, ratesTimeStackView, chartContainerView])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,8 +118,14 @@ final class CalculatorViewController: UIViewController {
                 padding: ._init(top: 20, left: 20, right: 20)
             )
             
-            chartContainerView.anchor(
+            ratesTimeStackView.centerXInSuperview()
+            ratesTimeStackView.anchor(
                 top: contentStackView.bottomAnchor,
+                padding: ._init(top: 30)
+            )
+            
+            chartContainerView.anchor(
+                top: ratesTimeStackView.bottomAnchor,
                 leading: $0._leadingAnchor,
                 bottom: $0.contentLayoutGuide.bottomAnchor,
                 trailing: $0._trailingAnchor,
@@ -116,6 +139,7 @@ final class CalculatorViewController: UIViewController {
             $0.setCustomSpacing(40, after: headerLabel)
             $0.setCustomSpacing(30, after: pickerStackView)
             $0.setCustomSpacing(30, after: newCurrencyInputTextField)
+            //$0.setCustomSpacing(30, after: convertButton)
         }
         
         with(euroPickerView) {
@@ -247,7 +271,9 @@ final class CalculatorViewController: UIViewController {
             textColor: .white,
             insets: .init(top: 8, left: 8, bottom: 20, right: 8)
         )
+        
         let chartData = LineChartData(dataSet: chartDataSet)
+        
         with(chartView) {
             $0.data = chartData
             $0.animate(xAxisDuration: 1.5, yAxisDuration: 1.5)
