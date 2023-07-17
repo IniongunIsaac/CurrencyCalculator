@@ -10,7 +10,17 @@ import DGCharts
 
 final class CalculatorViewController: UIViewController {
     
-    @Provided var viewModel: CalculatorViewModelProtocol
+    var viewModel: CalculatorViewModelProtocol
+    
+    init(viewModel: CalculatorViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     lazy var menuBarButton = UIBarButtonItem(
         image: .menu,

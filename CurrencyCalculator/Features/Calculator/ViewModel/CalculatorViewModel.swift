@@ -9,8 +9,16 @@ import Foundation
 
 final class CalculatorViewModel: CalculatorViewModelProtocol {
     
-    @Provided var symbolsLocalDatasource: SymbolsLocalDatasourceProtocol
-    @Provided var calculatorRemoteDatasource: CalculatorRemoteDatasourceProtocol
+    var symbolsLocalDatasource: SymbolsLocalDatasourceProtocol
+    var calculatorRemoteDatasource: CalculatorRemoteDatasourceProtocol
+    
+    init(
+        symbolsLocalDatasource: SymbolsLocalDatasourceProtocol,
+        calculatorRemoteDatasource: CalculatorRemoteDatasourceProtocol
+    ) {
+        self.symbolsLocalDatasource = symbolsLocalDatasource
+        self.calculatorRemoteDatasource = calculatorRemoteDatasource
+    }
     
     private(set) var symbols: [DBSymbol] = []
     weak var viewProtocol: CalculatorViewProtocol?

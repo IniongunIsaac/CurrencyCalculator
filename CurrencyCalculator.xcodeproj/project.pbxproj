@@ -15,6 +15,8 @@
 		55331BCC2A6555DB000A1925 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BCB2A6555DB000A1925 /* ResponseString.swift */; };
 		55331BCF2A655804000A1925 /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BCE2A655804000A1925 /* Codable+.swift */; };
 		55331BD12A655841000A1925 /* ModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BD02A655841000A1925 /* ModelDecodingTests.swift */; };
+		55331BD32A6566EA000A1925 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BD22A6566EA000A1925 /* DIContainer.swift */; };
+		55331BD52A656A48000A1925 /* DBSymbols+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BD42A656A48000A1925 /* DBSymbols+.swift */; };
 		554FDA412A61411A004C8B0E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 554FDA402A61411A004C8B0E /* DGCharts */; };
 		554FDA432A6144B6004C8B0E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 554FDA422A6144B6004C8B0E /* .gitignore */; };
 		554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA442A61479E004C8B0E /* Bundle+.swift */; };
@@ -95,6 +97,8 @@
 		55331BCB2A6555DB000A1925 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		55331BCE2A655804000A1925 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
 		55331BD02A655841000A1925 /* ModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDecodingTests.swift; sourceTree = "<group>"; };
+		55331BD22A6566EA000A1925 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		55331BD42A656A48000A1925 /* DBSymbols+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBSymbols+.swift"; sourceTree = "<group>"; };
 		554FDA422A6144B6004C8B0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		554FDA442A61479E004C8B0E /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		554FDA482A614AC8004C8B0E /* RemotePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePath.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				55331BCB2A6555DB000A1925 /* ResponseString.swift */,
+				55331BD42A656A48000A1925 /* DBSymbols+.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				554FDA622A616E35004C8B0E /* DependencyType.swift */,
 				554FDA642A616E8F004C8B0E /* DependencyProvider.swift */,
 				554FDA662A616EB2004C8B0E /* DependencyContainer.swift */,
+				55331BD22A6566EA000A1925 /* DIContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 				55BA114E2A5F1B260033E697 /* AppDelegate.swift in Sources */,
 				55E6742D2A62695D00B8AF3D /* CurrenciesViewController.swift in Sources */,
 				55E674372A62B3AB00B8AF3D /* BaloonMarker.swift in Sources */,
+				55331BD32A6566EA000A1925 /* DIContainer.swift in Sources */,
 				55BA11502A5F1B260033E697 /* SceneDelegate.swift in Sources */,
 				55BA118B2A5F32A90033E697 /* Code+.swift in Sources */,
 				554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */,
@@ -768,6 +775,7 @@
 				55331BC32A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift in Sources */,
 				55331BC12A63CB79000A1925 /* CalculatorViewMock.swift in Sources */,
 				55331BCA2A63CFA3000A1925 /* CalculatorViewModelTests.swift in Sources */,
+				55331BD52A656A48000A1925 /* DBSymbols+.swift in Sources */,
 				55331BC52A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift in Sources */,
 				55331BCC2A6555DB000A1925 /* ResponseString.swift in Sources */,
 				55331BC82A63CF19000A1925 /* Dependencies.swift in Sources */,

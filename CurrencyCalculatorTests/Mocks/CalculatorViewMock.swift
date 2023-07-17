@@ -8,14 +8,16 @@
 @testable import CurrencyCalculator
 
 final class CalculatorViewMock: CalculatorViewProtocol {
-    var loadingAnimationVisible = false
+    var showLoadingAnimationCalled = false
     var errorMessage = ""
     var toastType = ToastType.success
     var conversionResult = ""
+    var showConversionResultCalled = false
     var symbol: DBSymbol? = nil
+    var didChooseSymbolCalled = false
     
     func showLoadingAnimation(_ show: Bool) {
-        loadingAnimationVisible = show
+        showLoadingAnimationCalled = true
     }
     
     func showError(_ message: String, type: ToastType) {
@@ -24,10 +26,12 @@ final class CalculatorViewMock: CalculatorViewProtocol {
     }
     
     func showConversionResult(_ value: String) {
+        showConversionResultCalled = true
         conversionResult = value
     }
     
     func didChooseSymbol(_ symbol: DBSymbol) {
+        didChooseSymbolCalled = true
         self.symbol = symbol
     }
     

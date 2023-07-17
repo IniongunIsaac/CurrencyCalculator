@@ -63,6 +63,6 @@ extension DependencyContainer {
     static func configureDependencies() {
         register(type: CalculatorRemoteDatasourceProtocol.self, factory: CalculatorRemoteDatasource())
         register(type: SymbolsLocalDatasourceProtocol.self, factory: SymbolsLocalDatasource())
-        register(type: CalculatorViewModelProtocol.self, factory: CalculatorViewModel())
+        //register(type: CalculatorViewModelProtocol.self, factory: CalculatorViewModel())
     }
 }
