@@ -9,8 +9,7 @@ import UIKit
 import DGCharts
 
 final class CalculatorViewController: UIViewController {
-    
-    var viewModel: CalculatorViewModelProtocol
+    private var viewModel: CalculatorViewModelProtocol
     
     init(viewModel: CalculatorViewModelProtocol) {
         self.viewModel = viewModel
