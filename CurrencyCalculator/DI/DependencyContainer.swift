@@ -12,9 +12,10 @@ final class DependencyContainer {
     private static var cache: [String: Any] = [:]
     private static var generators: [String: () -> Any] = [:]
     
-    static func register<T>(type: T.Type,
-                                  as dependencyType: DependencyType = .automatic,
-                                  factory: @autoclosure @escaping () -> T
+    static func register<T>(
+        type: T.Type,
+        as dependencyType: DependencyType = .automatic,
+        factory: @autoclosure @escaping () -> T
     ) {
         generators[String(describing: type.self)] = factory
         
@@ -23,8 +24,9 @@ final class DependencyContainer {
         }
     }
     
-    static func resolve<T>(_ type: T.Type,
-                                 as dependencyType: DependencyType = .automatic
+    static func resolve<T>(
+        _ type: T.Type,
+        as dependencyType: DependencyType = .automatic
     ) -> T? {
         let key = String(describing: type.self)
         switch dependencyType {
@@ -49,6 +51,11 @@ final class DependencyContainer {
                 return nil
             }
         }
+    }
+    
+    static func invalidateCache() {
+        cache = [:]
+        generators = [:]
     }
 }
 

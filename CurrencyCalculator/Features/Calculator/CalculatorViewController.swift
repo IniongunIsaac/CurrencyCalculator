@@ -12,9 +12,22 @@ final class CalculatorViewController: UIViewController {
     
     @Provided var viewModel: CalculatorViewModelProtocol
     
-    lazy var menuBarButton = UIBarButtonItem(image: .menu, style: .plain, target: self, action: #selector(didTapMenuButton))
-    let signupButton = UIButton(title: "Sign up", textColor: .systemGreen)
-    lazy var signupBarButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(didTapSignupButton))
+    lazy var menuBarButton = UIBarButtonItem(
+        image: .menu,
+        style: .plain,
+        target: self,
+        action: #selector(didTapMenuButton)
+    )
+    let signupButton = UIButton(
+        title: "Sign up",
+        textColor: .systemGreen
+    )
+    lazy var signupBarButton = UIBarButtonItem(
+        title: "Sign up",
+        style: .plain,
+        target: self,
+        action: #selector(didTapSignupButton)
+    )
     let headerLabel = UILabel(
         text: "Currency\nCalcultor.",
         font: .systemFont(ofSize: 35, weight: .black),
@@ -95,8 +108,12 @@ final class CalculatorViewController: UIViewController {
             $0.setCustomSpacing(30, after: newCurrencyInputTextField)
         }
         
-        euroPickerView.widthAnchor.constraint(equalTo: newCurrencyPickerView.widthAnchor).isActive = true
-        euroPickerView.flag = .euro
+        with(euroPickerView) {
+            $0.widthAnchor.constraint(equalTo: newCurrencyPickerView.widthAnchor).isActive = true
+            $0.flag = .euro
+            $0.enableUserInteraction(false, alpha: 0.7)
+        }
+        
         newCurrencyInputTextField.enableUserInteraction(false, alpha: 0.7)
         newCurrencyInputTextField.rightText = "XXX"
         
@@ -256,6 +273,9 @@ final class CalculatorViewController: UIViewController {
 }
 
 extension CalculatorViewController: CalculatorViewProtocol {
+    
+    /// Displays or hides loading animation on the UI
+    /// - Parameter show: A boolean value that indicates whether or not the loading animation should be displayed
     func showLoadingAnimation(_ show: Bool) {
         showLoader(show, interactionEnabled: !show)
     }
@@ -264,10 +284,14 @@ extension CalculatorViewController: CalculatorViewProtocol {
         showMessage(message, type: type)
     }
     
+    /// Shows the result of conversion on the UI
+    /// - Parameter value: amount to be displayed on the UI
     func showConversionResult(_ value: String) {
         newCurrencyInputTextField.text = value
     }
     
+    /// Updates the picker view and the currency input with the symbol selected
+    /// - Parameter symbol: `DBSymbol` to be used for the UI update
     func didChooseSymbol(_ symbol: DBSymbol) {
         newCurrencyPickerView.text = symbol.code
         newCurrencyInputTextField.rightText = symbol.code

@@ -16,7 +16,12 @@ class Toast: UIView {
     
     static var shared = Toast()
     
-    let titleLabel = UILabel(text: "Test", numberOfLines: 0, color: .white, alignment: .left)
+    let titleLabel = UILabel(
+        text: "Test",
+        numberOfLines: 0,
+        color: .white,
+        alignment: .left
+    )
     
     var type: ToastType = .success {
         didSet {
@@ -32,11 +37,13 @@ class Toast: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(titleLabel)
-        titleLabel.anchor(top: safeAreaLayoutGuide.topAnchor,
-                          leading: leadingAnchor,
-                          bottom: bottomAnchor,
-                          trailing: trailingAnchor,
-                          padding: .init(top: 3, left: 20, bottom: 0, right: 5))
+        titleLabel.anchor(
+            top: safeAreaLayoutGuide.topAnchor,
+            leading: leadingAnchor,
+            bottom: bottomAnchor,
+            trailing: trailingAnchor,
+            padding: .init(top: 3, left: 20, bottom: 0, right: 5)
+        )
         self.isUserInteractionEnabled = true
         titleLabel.isUserInteractionEnabled = true
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapToast)))
@@ -85,7 +92,12 @@ class Toast: UIView {
         
         self.constraintHeight(constant: notchHeight + 50)
         
-        self.anchor(top: window.topAnchor, leading: window.leadingAnchor, bottom: nil, trailing: window.trailingAnchor,padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        self.anchor(
+            top: window.topAnchor,
+            leading: window.leadingAnchor,
+            trailing: window.trailingAnchor,
+            padding: .init(top: 0, left: 0, bottom: 0, right: 0)
+        )
         
         self.transform = .init(translationX: 0, y: -200)
         
@@ -96,6 +108,7 @@ class Toast: UIView {
         hideToast()
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

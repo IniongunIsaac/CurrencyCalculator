@@ -24,8 +24,12 @@ open class BalloonMarker: MarkerImage {
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?
     fileprivate var _drawAttributes = [NSAttributedString.Key : Any]()
     
-    @objc public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets)
-    {
+    @objc public init(
+        color: UIColor,
+        font: UIFont,
+        textColor: UIColor,
+        insets: UIEdgeInsets
+    ) {
         self.color = color
         self.font = font
         self.textColor = textColor
@@ -36,8 +40,7 @@ open class BalloonMarker: MarkerImage {
         super.init()
     }
     
-    open override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint
-    {
+    open override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
         var offset = self.offset
         var size = self.size
 
@@ -81,8 +84,7 @@ open class BalloonMarker: MarkerImage {
         return offset
     }
     
-    open override func draw(context: CGContext, point: CGPoint)
-    {
+    open override func draw(context: CGContext, point: CGPoint) {
         guard let label = label else { return }
         
         let offset = self.offsetForDrawing(atPoint: point)
@@ -100,8 +102,7 @@ open class BalloonMarker: MarkerImage {
 
         context.setFillColor(color.cgColor)
 
-        if offset.y > 0
-        {
+        if offset.y > 0 {
             context.beginPath()
             context.move(to: CGPoint(
                 x: rect.origin.x,
@@ -129,9 +130,7 @@ open class BalloonMarker: MarkerImage {
                 x: rect.origin.x,
                 y: rect.origin.y + arrowSize.height))
             context.fillPath()
-        }
-        else
-        {
+        } else {
             context.beginPath()
             context.move(to: CGPoint(
                 x: rect.origin.x,
@@ -178,13 +177,11 @@ open class BalloonMarker: MarkerImage {
         context.restoreGState()
     }
     
-    open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
-    {
+    open override func refreshContent(entry: ChartDataEntry, highlight: Highlight) {
         setLabel(String(entry.y))
     }
     
-    @objc open func setLabel(_ newLabel: String)
-    {
+    @objc open func setLabel(_ newLabel: String) {
         label = newLabel
         
         _drawAttributes.removeAll()

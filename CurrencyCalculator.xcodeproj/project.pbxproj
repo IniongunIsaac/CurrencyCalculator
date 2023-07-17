@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55331BC12A63CB79000A1925 /* CalculatorViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BC02A63CB79000A1925 /* CalculatorViewMock.swift */; };
+		55331BC32A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BC22A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift */; };
+		55331BC52A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BC42A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift */; };
+		55331BC82A63CF19000A1925 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BC72A63CF19000A1925 /* Dependencies.swift */; };
+		55331BCA2A63CFA3000A1925 /* CalculatorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55331BC92A63CFA3000A1925 /* CalculatorViewModelTests.swift */; };
 		554FDA412A61411A004C8B0E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 554FDA402A61411A004C8B0E /* DGCharts */; };
 		554FDA432A6144B6004C8B0E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 554FDA422A6144B6004C8B0E /* .gitignore */; };
 		554FDA452A61479E004C8B0E /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FDA442A61479E004C8B0E /* Bundle+.swift */; };
@@ -80,6 +85,11 @@
 /* Begin PBXFileReference section */
 		08D98EA9B3D958EDE31AB508 /* Pods-CurrencyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator/Pods-CurrencyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		240DCB9ECE27188D9ECC20B1 /* Pods_CurrencyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55331BC02A63CB79000A1925 /* CalculatorViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewMock.swift; sourceTree = "<group>"; };
+		55331BC22A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsLocalDatasourceMock.swift; sourceTree = "<group>"; };
+		55331BC42A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorRemoteDatasourceMock.swift; sourceTree = "<group>"; };
+		55331BC72A63CF19000A1925 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		55331BC92A63CFA3000A1925 /* CalculatorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelTests.swift; sourceTree = "<group>"; };
 		554FDA422A6144B6004C8B0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		554FDA442A61479E004C8B0E /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		554FDA482A614AC8004C8B0E /* RemotePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePath.swift; sourceTree = "<group>"; };
@@ -169,6 +179,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55331BBE2A63CB03000A1925 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				55331BC02A63CB79000A1925 /* CalculatorViewMock.swift */,
+				55331BC22A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift */,
+				55331BC42A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		55331BBF2A63CB4E000A1925 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				55331BC72A63CF19000A1925 /* Dependencies.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		55331BC62A63CE7F000A1925 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		554FDA462A614AB4004C8B0E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +319,11 @@
 		55BA11632A5F1B270033E697 /* CurrencyCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				55331BC62A63CE7F000A1925 /* Stubs */,
+				55331BBF2A63CB4E000A1925 /* DI */,
+				55331BBE2A63CB03000A1925 /* Mocks */,
 				55BA11642A5F1B270033E697 /* CurrencyCalculatorTests.swift */,
+				55331BC92A63CFA3000A1925 /* CalculatorViewModelTests.swift */,
 			);
 			path = CurrencyCalculatorTests;
 			sourceTree = "<group>";
@@ -712,6 +751,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55331BC32A63CD11000A1925 /* SymbolsLocalDatasourceMock.swift in Sources */,
+				55331BC12A63CB79000A1925 /* CalculatorViewMock.swift in Sources */,
+				55331BCA2A63CFA3000A1925 /* CalculatorViewModelTests.swift in Sources */,
+				55331BC52A63CDB2000A1925 /* CalculatorRemoteDatasourceMock.swift in Sources */,
+				55331BC82A63CF19000A1925 /* Dependencies.swift in Sources */,
 				55BA11652A5F1B270033E697 /* CurrencyCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

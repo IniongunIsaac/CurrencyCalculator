@@ -21,7 +21,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         if dbSymbols.isEmpty {
             getRemoteSymbols()
         } else {
-            symbols = dbSymbols
+            symbols = dbSymbols.sorted { $0.name < $1.name }
         }
     }
     
@@ -39,6 +39,8 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         }
     }
     
+    /// Maps symbols response from the server into a DB Model and asks the LocalDatasource to cache
+    /// - Parameter response: Model received from the server
     private func didGetRemoteSymbols(response: SymbolsResponse) {
         if let remoteSymbols = response.symbols, !remoteSymbols.isEmpty {
             let dbSymbols = remoteSymbols.map { code, name in
@@ -75,6 +77,12 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         }
     }
     
+    /// Manipulates `ConversionResponse` gotten from the server and asks the ViewProtocol
+    /// to update the UI with the result
+    /// - Parameters:
+    ///   - response: `ConversionResponse` retrieved from the server
+    ///   - amount: amount supplied by the user to convert
+    ///   - symbol: currency to convert amount to
     private func didGetConversionData(
         _ response: ConversionResponse,
         amount: String,
