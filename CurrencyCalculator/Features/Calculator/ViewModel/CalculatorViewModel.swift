@@ -24,6 +24,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
     weak var viewProtocol: CalculatorViewProtocol?
     private var selectedSymbol: DBSymbol?
     
+    /// Initialise symbols from local cache or remote datasource
     func getSymbols() {
         let dbSymbols = symbolsLocalDatasource.getSymbols()
         if dbSymbols.isEmpty {
@@ -33,6 +34,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         }
     }
     
+    /// Fetch currencies from remote datasource
     private func getRemoteSymbols() {
         viewProtocol?.showLoadingAnimation(true)
         calculatorRemoteDatasource.getSymbols { [weak self] result in
